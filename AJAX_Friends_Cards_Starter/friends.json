@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Claudia",
+        "relationship": "Friend",
+        "detail": "Enjoys making websites",
+        "hobbies": "Coding, dancing, music",
+    },
+    {
+        "name": "Emily",
+        "relationship": "Friend",
+        "detail": "Loves reading and writing",
+        "hobbies": "Reading, writing, traveling"
+    },
+    {
+        "name": "Sam",
+        "relationship": "Friend",
+        "detail": "Enjoys dancing activities",
+        "hobbies": "Dancing, reading, sleeping"
+    },
+    {
+        "name": "Amelia",
+        "relationship": "Friend",
+        "detail": "Loves traveling and exploring new places",
+        "hobbies": "Traveling, reading, cooking"
+    },
+    {
+        "name": "Megan",
+        "relationship": "Friend",
+        "detail": "Enjoys beauty activities",
+        "hobbies": "Makeup, skincare, fashion"
+    }
+]
