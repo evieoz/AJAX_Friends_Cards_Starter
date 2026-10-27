@@ -28,5 +28,11 @@
         "relationship": "Friend",
         "detail": "Enjoys beauty activities",
         "hobbies": "Makeup, skincare, fashion"
+    },
+    {
+        "name": "Lexa",
+        "relationship": "Friend",
+        "detail": "Enjoys social gatherings",
+        "hobbies": "Partying, social media, shopping"
     }
 ]
