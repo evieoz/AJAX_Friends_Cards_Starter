@@ -10,7 +10,7 @@ const cardsContainer = document.getElementById("cards");
 const statusMessage = document.getElementById("status");
 
 // CHECKPOINT 2: When the Load Friends button is clicked, run loadFriends.
-
+loadButton.addEventListener("click", loadFriends);
 
 // -------------------------------------------------------------
 // loadFriends: request the file, check the response, parse it.
@@ -21,7 +21,30 @@ function loadFriends() {
   statusMessage.textContent = "Loading friends...";
 
   // CHECKPOINT 2: Write the request.
-  //   - Create the request and open a GET request for friends.json.
+  //   - Create the request and open a GET request for friends.json.\
+  const request = new XMLHttpRequest();
+  request.open("GET", "friends.json");
+
+  // Check if the file loaded successfully
+  request.onload = function () {
+    if (request.status === 200) {
+      try {
+        const friends = JSON.parse(request.responseText);
+        renderFriends(friends);
+      } catch (error) {
+        showDataError(error);
+      }
+    } else {
+      showLoadError();
+    }
+  };
+
+  // Show an error if the request fails
+  request.onerror = showLoadError;
+
+  // Send the request
+  request.send();
+
   //   - Write the onload handler:
   //       status 200    -> turn the response text into an array,
   //                        then pass the array to renderFriends()
@@ -39,6 +62,7 @@ function loadFriends() {
   //       showDataError(error);
   //     }
 
+  
 }
 
 
