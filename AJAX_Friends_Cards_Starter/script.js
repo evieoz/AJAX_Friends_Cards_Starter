@@ -70,6 +70,30 @@ function loadFriends() {
 // renderFriends: turn the array into cards on the page.
 // -------------------------------------------------------------
 function renderFriends(friends) {
+
+  
+  // Start with an empty string for the cards
+  let cardsHTML = "";
+
+  // Loop through each friend and create a card
+  friends.forEach(function(friend) {
+    cardsHTML += `
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title h4">${friend.name}</h2>
+            <p class="relationship">${friend.relationship}</p>
+            <p>${friend.detail}</p>
+            <p class="hobbies"><strong>Hobbies:</strong> ${friend.hobbies.join(", ")}</p>
+          </div>
+        </article>
+      </div>
+    `;
+  });
+
+  // Put all the cards on the page
+  cardsContainer.innerHTML = cardsHTML;
+
   // CHECKPOINT 3: Build every card in one string, then put the
   // finished string on the page. One person = one card.
   // Use this supplied markup inside a template literal. Replace each
